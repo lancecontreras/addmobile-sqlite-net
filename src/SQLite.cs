@@ -2714,6 +2714,11 @@ namespace SQLite
 			ByName,
 			ByPosition
 		}
+
+		public static TableMappingBuilder<T> Builder<T> ()
+		{
+			return new TableMappingBuilder<T> ();
+		}
 	}
 
 	class EnumCacheInfo

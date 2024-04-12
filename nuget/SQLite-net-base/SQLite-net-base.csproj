@@ -1,9 +1,9 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>SQLite-net</AssemblyName>
-    <PackageId>sqlite-net-base</PackageId>
+    <PackageId>addsys-sqlite-net-base</PackageId>
     <AssemblyTitle>SQLite-net .NET Standard Base Library</AssemblyTitle>
     <Description>
       This is a special version of SQLite-net-pcl that does not include a SQLitePCLRaw bundle.
@@ -12,11 +12,13 @@
     </Description>
 
     <Configurations>Release;Debug</Configurations>
+
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>false</DebugSymbols>
-    <DebugType></DebugType>
+    <DebugType>none</DebugType>
     <DefineConstants>USE_SQLITEPCL_RAW;NO_SQLITEPCL_RAW_BATTERIES;RELEASE</DefineConstants>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <DocumentationFile>bin\Release\netstandard2.0\SQLite-net.xml</DocumentationFile>
